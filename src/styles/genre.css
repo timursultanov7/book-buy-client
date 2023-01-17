@@ -1,0 +1,18 @@
+/* MEDIA QUAERIES */
+
+@media (max-width: 57.6em) {
+  .genre-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .genre-books-wrapper {
+    display: flex;
+  }
+
+  .heading-primary-genre {
+    align-self: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,82 @@
+.hidden {
+  display: none;
+}
+
+/* MEDIA QUAERIES */
+
+@media (max-width: 57.6em) {
+  .mobile-header-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0 2rem;
+    background-color: #fff;
+    /* border-bottom: 1px solid #000; */
+    position: relative;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    background-color: #efefefff;
+    justify-content: center;
+  }
+
+  .close-btn {
+    align-self: flex-end;
+  }
+
+  .logo {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .header-controls-left {
+    margin-right: 2rem;
+  }
+  .header-controls-rigth {
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .mobile-nav-list-item {
+    margin-right: 2rem;
+  }
+  .mobile-nav-list-item:hover {
+    margin-right: 2rem;
+    color: #343a3dff;
+  }
+  .mobile-nav-list-item:last-child {
+    margin-right: 0rem;
+  }
+
+  .mobile-nav-link:link,
+  .mobile-nav-link:visited {
+    color: #777;
+  }
+  .mobile-nav-link:hover,
+  .mobile-nav-link:active {
+    color: #343a3dff;
+  }
+
+  .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .mobile-menu-list-item {
+    color: #000;
+  }
+}

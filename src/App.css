@@ -1,0 +1,45 @@
+/* MAIN COLOR
+
+#abcb71
+
+
+Second colors
+
+--onyx: #343A3Dff;
+--cultured: #EFEFEFff;
+--ebony: #565C57ff;
+--beige: #EAEACBff;
+--black: #000000ff;
+
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  color: #777;
+  line-height: 1;
+}
+
+.sticky-header {
+  position: sticky;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+/* MEDIA QUAERIES */
+
+@media (max-width: 57.6em) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
