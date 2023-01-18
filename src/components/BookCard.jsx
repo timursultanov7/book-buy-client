@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import "../styles/book-card.css";
@@ -13,10 +13,12 @@ export const BookCard = ({ book }) => {
         <div className="book-card-info">
           <h3 className="book-title-card">{book.book_name}</h3>
 
-          <p className="book-price">${book.book_price}</p>
+          {/* <p className="book-price">${book.book_price}</p> */}
         </div>
       </Link>
-      <button className="buy-book-btn">Read</button>
+      <Link className="card-link" to={`/read-book/${book.book_id}`}>
+        <button className="buy-book-btn">Read</button>
+      </Link>
     </div>
   );
 };

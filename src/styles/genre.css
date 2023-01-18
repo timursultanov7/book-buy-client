@@ -4,9 +4,11 @@
   .genre-container {
     display: flex;
     flex-direction: column;
+    /* padding: 2rem; */
   }
   .genre-books-wrapper {
     display: flex;
+    /* padding: 2rem; */
   }
 
   .heading-primary-genre {

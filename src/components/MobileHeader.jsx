@@ -28,18 +28,15 @@ const MobileHeader = () => {
       </div>
       <nav className="header-controls-rigth">
         <ul className="mobile-nav-list">
-          <li className="mobile-nav-list-item">
-            <SearchIcon style={{ fontSize: "2.6rem" }} />
-          </li>
-
+          <Link className="mobile-nav-link" to="/search">
+            <li className="mobile-nav-list-item">
+              <SearchIcon style={{ fontSize: "2.6rem" }} />
+            </li>
+          </Link>
           <li className="mobile-nav-list-item">
             <LoginIcon style={{ fontSize: "2.6rem" }} />
           </li>
-          {/* <li className="mobile-nav-list-item">
-            <Link to="/cart" className="mobile-nav-link">
-              <ShoppingCartIcon style={{ fontSize: "2.6rem" }} />
-            </Link>
-          </li> */}
+
           <li className="mobile-nav-list-item" onClick={handleNavState}>
             <MenuIcon style={{ fontSize: "2.6rem" }} />
           </li>

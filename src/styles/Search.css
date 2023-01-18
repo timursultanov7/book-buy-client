@@ -1,0 +1,102 @@
+@media (max-width: 57.6em) {
+  .search-container {
+  }
+
+  .input-search-container {
+    padding: 2rem;
+    position: relative;
+  }
+
+  .input-search {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .search-icon-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(70%, 80%);
+    /* color: #000000ff; */
+  }
+
+  .popular-searches {
+    display: grid;
+    gap: 1rem;
+
+    height: 100vh;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .popular-searches-heading {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .book-card-search {
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  }
+
+  .grid-search-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+  .book-card-info--search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .search-headings-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-secondary-heading {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .search-tertiary-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000000ff;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .search-genre-heading {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .buy-book-btn--search {
+    width: 100%;
+  }
+
+  .search-card-rating-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .search-card-rating-wrapper h2 {
+    font-size: 1.2rem;
+    /* color: #000000ff; */
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .search-card-rating-wrapper p {
+    color: #000000ff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+}

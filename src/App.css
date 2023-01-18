@@ -13,6 +13,8 @@ Second colors
 
  */
 
+/* GENERAL */
+
 * {
   padding: 0;
   margin: 0;
@@ -26,6 +28,20 @@ body {
   line-height: 1;
 }
 
+input:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.8rem rgba(234, 234, 203, 0.465);
+}
+
+input[type="text"] {
+  padding-left: 3rem;
+}
+
+/* input[type="text"]:focus {
+  text-align: center;
+} */
+
 .sticky-header {
   position: sticky;
 }
@@ -35,6 +51,40 @@ body {
   row-gap: 9.6rem;
   column-gap: 6.4rem;
 }
+
+.buy-book-btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  /* text-decoration: none; */
+  padding: 0.5rem 2rem;
+  background-color: #abcb71;
+  border-radius: 20rem;
+  width: 10rem;
+}
+
+.buy-book-btn:hover {
+  background-color: #000000ff;
+  color: #f1f3f5;
+  cursor: pointer;
+}
+
+.card-link:link,
+.card-link:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-link:hover,
+.card-link:active {
+}
+
+/* /////////////////// */
 
 /* MEDIA QUAERIES */
 

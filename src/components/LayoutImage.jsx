@@ -8,7 +8,7 @@ export const LayoutImage = () => {
       <div className="layout-img">
         <div>
           <h1 className="primary-heading">
-            Book Buy is an app for buying your favorite books!
+            Book Buy is an app for reading your favorite books online!
           </h1>
           <a className="try-btn" href="#">
             <span>Try For Free</span>

@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import ReadBook from "./pages/ReadBook";
 
 import { Book } from "./pages/Book";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/book/:id" element={<Book />} />
         <Route path="/login-page" element={<LoginPage />} />
         <Route path="/read-book/:id" element={<ReadBook />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
       <MobileFooter />
     </div>

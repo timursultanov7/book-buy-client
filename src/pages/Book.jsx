@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { SingleBookContext } from "../context/SingleBookContext";
+import "../styles/book.css";
 
 export const Book = () => {
   const { singleBook, setSingleBook } = useContext(SingleBookContext);
@@ -30,9 +32,15 @@ export const Book = () => {
         return (
           <div className="single-book-wrapper" key={book.book_id}>
             <img className="book-img" src={book.book_img} />
-            <h2 className="book-author">{book.book_author}</h2>
-            <h3 className="book-title">{book.book_name}</h3>
-            <p className="book-price">${book.book_price}</p>
+            <div className="single-book-author-title">
+              <div>
+                <h2 className="book-author">{book.book_author}</h2>
+                <h3 className="book-title">{book.book_name}</h3>
+              </div>
+              <Link className="card-link" to={`/read-book/${book.book_id}`}>
+                <button className="buy-book-btn single-book-btn">Read</button>
+              </Link>
+            </div>
             <p className="book-description">{book.book_description}</p>
           </div>
         );
