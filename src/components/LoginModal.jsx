@@ -19,16 +19,21 @@ const LoginModal = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:9000/api/auth/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          user_email: user_email,
-          user_password: user_password,
-        }),
-      });
+      // const res = await fetch("http://localhost:9000/api/auth/",
+      const res = await fetch(
+        "https://book-buy-server.onrender.com/api/auth/",
+
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user_email: user_email,
+            user_password: user_password,
+          }),
+        }
+      );
 
       const data = await res.json();
       // console.log(data);

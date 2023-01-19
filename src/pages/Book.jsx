@@ -18,7 +18,8 @@ export const Book = () => {
     const getSingleBook = async () => {
       try {
         const res = await fetch(
-          `http://localhost:9000/api/books/book/${params.id}`
+          // `http://localhost:9000/api/books/book/${params.id}`
+          `https://book-buy-server.onrender.com/api/books/book/${params.id}`
         );
 
         const data = await res.json();

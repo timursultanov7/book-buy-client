@@ -8,7 +8,10 @@ export const BooksProvider = ({ children }) => {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const res = await fetch("http://localhost:9000/api/books/all");
+        // const res = await fetch("http://localhost:9000/api/books/all");
+        const res = await fetch(
+          "https://book-buy-server.onrender.com/api/books/all"
+        );
 
         const data = await res.json();
 

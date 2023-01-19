@@ -50,10 +50,6 @@ const Search = () => {
                   />
                 </div>
               </Link>
-              {/* <div className="search-card-rating-wrapper">
-                <h2>Rating:</h2>
-                <p>{book.book_rating} of 5</p>
-              </div> */}
 
               <div className="book-card-info--search">
                 <div className="search-headings-wrapper">

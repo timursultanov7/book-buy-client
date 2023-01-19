@@ -26,18 +26,23 @@ const SignUp = () => {
   const postUser = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:9000/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        user_firstname,
-        user_lastname,
-        user_email,
-        user_password,
-      }),
-    })
+    // fetch("http://localhost:9000/api/auth/signup",
+    fetch(
+      "https://book-buy-server.onrender.com/api/auth/signup",
+
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_firstname,
+          user_lastname,
+          user_email,
+          user_password,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
