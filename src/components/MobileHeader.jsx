@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import LoginIcon from "@mui/icons-material/Login";
+import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
-import CloseIcon from "@mui/icons-material/Close";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+
+import { LoginModalContext } from "../context/LoginModalContext";
+
+import { LoginContext } from "../context/LoginContext";
+import LoginModal from "./LoginModal";
 
 const MobileHeader = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const [showDrop, setShowDrop] = useState(false);
+
+  const { show, handleShow } = useContext(LoginModalContext);
+
+  const { setIsLoggedIn, isLoggedIn } = useContext(LoginContext);
 
   const handleNavState = () => {
     setIsNavOpen(!isNavOpen);
@@ -34,7 +52,40 @@ const MobileHeader = () => {
             </li>
           </Link>
           <li className="mobile-nav-list-item">
-            <LoginIcon style={{ fontSize: "2.6rem" }} />
+            {isLoggedIn ? (
+              <div>
+                <LogoutIcon
+                  style={{ fontSize: "2.6rem" }}
+                  onClick={() => setShowDrop(!showDrop)}
+                />
+
+                {showDrop && (
+                  <Box
+                    sx={{
+                      width: "100%",
+                      maxWidth: 360,
+                      bgcolor: "background.paper",
+                      position: "absolute",
+                    }}
+                  >
+                    <nav aria-label="main mailbox folders">
+                      <List>
+                        <ListItem disablePadding>
+                          <ListItemButton onClick={() => setIsLoggedIn(false)}>
+                            <ListItemIcon>
+                              <FontAwesomeIcon icon={faRightFromBracket} />
+                            </ListItemIcon>
+                            <ListItemText primary="Logout" />
+                          </ListItemButton>
+                        </ListItem>
+                      </List>
+                    </nav>
+                  </Box>
+                )}
+              </div>
+            ) : (
+              <PersonIcon onClick={handleShow} style={{ fontSize: "2.6rem" }} />
+            )}
           </li>
 
           <li className="mobile-nav-list-item" onClick={handleNavState}>
@@ -42,6 +93,8 @@ const MobileHeader = () => {
           </li>
         </ul>
       </nav>
+
+      {show && <LoginModal />}
     </header>
   );
 };

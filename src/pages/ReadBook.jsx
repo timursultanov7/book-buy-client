@@ -1,12 +1,29 @@
-import React, { useEffect, useState, useContext } from "react";
-import { SingleBookContext } from "../context/SingleBookContext";
+import React, { useEffect, useState } from "react";
+
 import { useParams } from "react-router-dom";
 import "../styles/read-book.css";
 
 const ReadBook = () => {
+  const [singleBook, setSingleBook] = useState([]);
+
   const params = useParams();
 
-  const { singleBook, setSingleBook } = useContext(SingleBookContext);
+  useEffect(() => {
+    const getSingleBook = async () => {
+      try {
+        const res = await fetch(
+          `http://localhost:9000/api/books/book/${params.id}`
+        );
+
+        const data = await res.json();
+
+        setSingleBook(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getSingleBook();
+  }, [params]);
 
   return (
     <>

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LoginModalContext } from "../context/LoginModalContext";
+import { LoginContext } from "../context/LoginContext";
 import "../styles/layout-image.css";
-// import '/'
 
 export const LayoutImage = () => {
+  const { handleShow } = useContext(LoginModalContext);
+
+  const { isLoggedIn } = useContext(LoginContext);
   return (
     <div className="layout-img-container grid">
       <div className="layout-img">
@@ -10,9 +14,11 @@ export const LayoutImage = () => {
           <h1 className="primary-heading">
             Book Buy is an app for reading your favorite books online!
           </h1>
-          <a className="try-btn" href="#">
-            <span>Try For Free</span>
-          </a>
+          {!isLoggedIn && (
+            <button onClick={handleShow} className="try-btn">
+              <span>Try For Free</span>
+            </button>
+          )}
         </div>
       </div>
     </div>

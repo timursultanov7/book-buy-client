@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import "../styles/genre.css";
-import { BooksContext } from "../context/BooksContext";
+
 import { GenreContext } from "../context/GenreContext";
 import { useParams } from "react-router-dom";
 import { BookCard } from "../components/BookCard";
@@ -8,10 +8,7 @@ import { BookCard } from "../components/BookCard";
 export const Genre = () => {
   const params = useParams();
 
-  const { books, setBooks } = useContext(BooksContext);
   const { genre, setGenre } = useContext(GenreContext);
-
-  // console.log(params);
 
   const getGenre = async () => {
     try {
