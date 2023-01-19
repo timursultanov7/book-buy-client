@@ -14,7 +14,7 @@ export const Genre = () => {
     try {
       const res = await fetch(
         // `http://localhost:9000/api/books/${params.genre.toLowerCase()}`
-        `https://book-buy-server.onrender.com//api/books/${params.genre.toLowerCase()}`
+        `https://book-buy-server.onrender.com/api/books/${params.genre.toLowerCase()}`
       );
 
       const data = await res.json();
