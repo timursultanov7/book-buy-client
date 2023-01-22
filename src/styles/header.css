@@ -4,7 +4,7 @@
 
 /* MEDIA QUAERIES */
 
-@media (max-width: 57.6em) {
+@media (max-width: 50em) {
   .mobile-header-container {
     display: flex;
     flex-direction: row;
@@ -16,6 +16,7 @@
     background-color: #fff;
     /* border-bottom: 1px solid #000; */
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   }
 
   .mobile-menu {
@@ -40,7 +41,21 @@
   }
 
   .header-controls-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 2rem;
+  }
+
+  .header-heading {
+    /* margin-left: 2rem; */
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-sheight: 1.5;
+    text-transform: capitalize;
+    font-style: italic;
+    color: #777;
   }
   .header-controls-rigth {
   }
@@ -53,6 +68,8 @@
 
   .mobile-nav-list-item {
     margin-right: 2rem;
+    cursor: pointer;
+    color: #777;
   }
   .mobile-nav-list-item:hover {
     margin-right: 2rem;

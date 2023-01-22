@@ -1,22 +1,12 @@
 /* MEDIA QUAERIES */
 
-@media (max-width: 57.6em) {
+@media (max-width: 50em) {
   .book-card {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
       rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     margin: 2rem;
     border-radius: 9px;
   }
-
-  /* .card-link:link,
-  .card-link:visited {
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .card-link:hover,
-  .card-link:active {
-  } */
 
   .book-img-wrapper {
   }
@@ -34,13 +24,23 @@
     /* padding: 0.2rem; */
   }
   .book-title-card {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 0.3rem;
     color: #343a3dff;
+    letter-spacing: 1px;
   }
   .book-price {
     font-size: 0.9rem;
     font-weight: 500;
     color: #777;
+  }
+}
+
+@media (max-width: 32em) {
+  /* 512px */
+
+  .book-card {
+    /* margin: 2rem 0; */
+    /* padding: 2rem 0; */
   }
 }

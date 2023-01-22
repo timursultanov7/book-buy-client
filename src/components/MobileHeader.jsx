@@ -27,7 +27,7 @@ const MobileHeader = () => {
 
   const { show, handleShow } = useContext(LoginModalContext);
 
-  const { setIsLoggedIn, isLoggedIn } = useContext(LoginContext);
+  const { setIsLoggedIn, isLoggedIn, user } = useContext(LoginContext);
 
   const handleNavState = () => {
     setIsNavOpen(!isNavOpen);
@@ -43,6 +43,10 @@ const MobileHeader = () => {
             className="logo"
           />
         </Link>
+
+        {isLoggedIn && (
+          <p className="header-heading"> {user[0].user_firstname}, welcome!</p>
+        )}
       </div>
       <nav className="header-controls-rigth">
         <ul className="mobile-nav-list">

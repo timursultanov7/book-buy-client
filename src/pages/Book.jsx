@@ -43,14 +43,14 @@ export const Book = () => {
                 <h2 className="book-author">{book.book_author}</h2>
                 <h3 className="book-title">{book.book_name}</h3>
               </div>
-              <Link
-                onClick={!isLoggedIn && handleShow}
-                className="card-link"
-                to={isLoggedIn && `/read-book/${book.book_id}`}
-              >
-                <button className="buy-book-btn single-book-btn">Read</button>
-              </Link>
             </div>
+            <Link
+              onClick={!isLoggedIn && handleShow}
+              className="card-link"
+              to={isLoggedIn && `/read-book/${book.book_id}`}
+            >
+              <button className="buy-book-btn single-book-btn">Read</button>
+            </Link>
             <p className="book-description">{book.book_description}</p>
           </div>
         );

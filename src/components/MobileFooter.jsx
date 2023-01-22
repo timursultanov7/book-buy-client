@@ -13,7 +13,7 @@ const MobileFooter = () => {
           <img
             src="https://live.staticflickr.com/65535/52622235762_afc2d4217b_q.jpg"
             alt="logo"
-            className="logo"
+            className="logo logo-footer"
           />
         </Link>
       </div>

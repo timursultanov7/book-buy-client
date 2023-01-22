@@ -10,8 +10,7 @@ import "../styles/signup.css";
 
 const SignUp = () => {
   const { show, setShow } = useContext(LoginModalContext);
-  // console.log(show);
-  // console.log(show);
+
   const [errorMsg, setErrorMsg] = useState("");
   const [users, setUsers] = useState([]);
   const [user_firstname, setUserFirstName] = useState([]);
@@ -19,8 +18,6 @@ const SignUp = () => {
   const [user_email, setUserEmail] = useState([]);
   const [user_password, setUserPassword] = useState([]);
 
-  // console.log(userValues);
-  // console.log(users);
   const navigate = useNavigate();
 
   const postUser = (e) => {
@@ -68,61 +65,63 @@ const SignUp = () => {
   return (
     <div className="signup-wrapper">
       <div className="signup-title">
-        <h1>Welcome to E-Commerce</h1>
+        <h1>Welcome to Book Buy</h1>
       </div>
       <div className="signup-container">
-        <div className="signup-sub-container">
-          <div className="signup-form-container">
-            <form onSubmit={postUser} className="signup-form">
-              <div>
-                <label>First name</label>
-                <input
-                  onChange={(e) => setUserFirstName(e.target.value)}
-                  type="text"
-                  placeholder="First name"
-                />
-              </div>
-              <div>
-                <label>Last name</label>
-                <input
-                  onChange={(e) => setUserLastName(e.target.value)}
-                  type="text"
-                  placeholder="Last name"
-                />
-              </div>
-              <div>
-                <label>Email address</label>
-                <input
-                  onChange={(e) => setUserEmail(e.target.value)}
-                  type="email"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div>
-                <label>Password</label>
-                <input
-                  onChange={(e) => setUserPassword(e.target.value)}
-                  type="password"
-                  placeholder="Enter password"
-                />
-              </div>
+        <div className="signup-form-container">
+          <form onSubmit={postUser} className="signup-form">
+            <div className="input-div">
+              <label>First name</label>
+              <input
+                onChange={(e) => setUserFirstName(e.target.value)}
+                type="text"
+                placeholder="First name"
+                className="input-form"
+              />
+            </div>
+            <div className="input-div">
+              <label>Last name</label>
+              <input
+                onChange={(e) => setUserLastName(e.target.value)}
+                type="text"
+                placeholder="Last name"
+                className="input-form"
+              />
+            </div>
+            <div className="input-div">
+              <label>Email address</label>
+              <input
+                onChange={(e) => setUserEmail(e.target.value)}
+                type="email"
+                placeholder="Enter email"
+                className="input-form"
+              />
+            </div>
+            <div className="input-div">
+              <label>Password</label>
+              <input
+                onChange={(e) => setUserPassword(e.target.value)}
+                type="password"
+                placeholder="Enter password"
+                className="input-form"
+              />
+            </div>
 
-              {errorMsg ? <p> Email already being used, please login</p> : ""}
+            {errorMsg ? <p> Email already being used, please login</p> : ""}
 
-              <div>
-                <button type="submit">Sign Up</button>
-              </div>
-              <p>
-                Already registered{" "}
-                <button onClick={handleRegisterModal}>sign in?</button>
-              </p>
-            </form>
+            <button className="custom-btn btn-sign-up" type="submit">
+              Sign Up
+            </button>
+          </form>
 
-            <div className="signup-social-media">
-              <div className="signup-buttons">
-                <button>Sign Up with Google</button>
-                <button>Sign Up with Facebook</button>
-              </div>
+          <div className="signup-social-media">
+            <div className="signup-buttons">
+              <button className="custom-btn btn-sign-up btn-sign-up--google">
+                Sign Up with Google
+              </button>
+              <button className="custom-btn btn-sign-up btn-sign-up--facebook">
+                Sign Up with Facebook
+              </button>
             </div>
           </div>
         </div>

@@ -1,12 +1,15 @@
 /* MEDIA QUAERIES */
 
-@media (max-width: 57.6em) {
+@media (max-width: 50em) {
+  /* 800x */
   .single-book-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    /* grid-template-rows: 1fr 2fr; */
+    grid-template-rows: 0.5fr 0.1fr 1fr;
     padding: 2rem;
     gap: 1rem;
+    align-items: center;
   }
 
   .single-book-author-title {
@@ -41,4 +44,23 @@
     letter-spacing: 1px;
     /* align-self: flex-end; */
   }
+
+  .single-book-wrapper {
+    grid-template-rows: 0.5fr 0.1fr 1fr;
+  }
+
+  .card-link {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 50em) {
+  /* 480px */
+  /* .single-book-wrapper {
+    grid-template-rows: 0.5fr 0.1fr 1fr;
+  }
+
+  .card-link {
+    grid-column: 1/-1;
+  } */
 }

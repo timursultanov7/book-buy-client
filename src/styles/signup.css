@@ -1,9 +1,10 @@
 .signup-wrapper {
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  height: 100vh;
-  width: 100vw;
+  align-items: center;
+  /* width: 100vw; */
+  /* height: 100vh; */
 }
 .signup-title {
   text-align: center;
@@ -15,22 +16,73 @@
   justify-content: center;
   align-items: center;
 }
-/* .signup-sub-container {
-} */
+
 .signup-form-container {
-  display: flex;
+  /* padding: 2rem; */
+  row-gap: 2rem;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .signup-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 2rem;
   border-right: 1px solid #444;
-  padding-right: 3rem;
+  padding: 2rem;
 }
-.signup-social-media {
-  padding-left: 3rem;
 
-  /* flex-direction: column; */
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-div label {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.input-form {
+  height: 2.5rem;
+}
+
+.signup-social-media {
+  padding: 2rem;
 }
 
 .signup-buttons {
   display: flex;
   flex-direction: column;
+}
+
+.btn-sign-up {
+  width: 100% !important;
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+}
+
+.btn-sign-up:hover {
+  background-color: #000000ff;
+  color: #efefefff;
+}
+
+.btn-sign-up--google {
+  background-color: #ff6b6b;
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+}
+.btn-sign-up--facebook {
+  background-color: #339af0;
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+}
+
+/* MEDIA QUAERIES */
+
+@media (max-width: 50em) {
+  .signup-form-container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,6 @@
 /* MEDIA QUAERIES */
 
-@media (max-width: 57.6em) {
+@media (max-width: 50em) {
   .categories-container {
     display: grid;
     gap: 1rem;
