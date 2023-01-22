@@ -1,5 +1,28 @@
-.hidden {
-  display: none;
+.mobile-header-container {
+  overflow: hidden;
+}
+
+.mobile-header-container {
+  position: relative;
+}
+
+.list-item-icon-mui {
+  /* display: inline-block; */
+}
+
+.icon-mui {
+  /* z-index: 9999; */
+  height: 3rem;
+  width: 4rem;
+}
+
+.list-item-text {
+  z-index: 1;
+  position: absolute;
+  color: #565c57ff;
+
+  font-weight: 700;
+  font-size: 2srem;
 }
 
 /* MEDIA QUAERIES */
@@ -49,7 +72,7 @@
 
   .header-heading {
     /* margin-left: 2rem; */
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 1px;
     line-sheight: 1.5;

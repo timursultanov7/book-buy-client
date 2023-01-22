@@ -2,6 +2,38 @@
   overflow-y: scroll;
 }
 
+@media (max-width: 64em) {
+  /* 1024px */
+
+  /* .bestsellers-container {
+    overflow-y: scroll;
+    padding: 2rem;
+  }
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 3rem;
+  }
+
+  .book {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+
+  .book-img {
+    width: 10rem;
+    height: 13rem;
+  }
+
+  .book-author {
+    font-size: 1.2rem;
+  }
+  .book-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  } */
+}
+
 @media (max-width: 50em) {
   .bestsellers-container {
     overflow-y: scroll;

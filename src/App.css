@@ -115,15 +115,21 @@ input::placeholder {
 .card-link:visited {
   text-decoration: none;
   cursor: pointer;
+  color: #000000ff;
 }
 
 .card-link:hover,
 .card-link:active {
+  color: #000000ff;
 }
 
 /* /////////////////// */
 
 /* MEDIA QUAERIES */
+
+@media (max-width: 64em) {
+  /* 1024px */
+}
 
 @media (max-width: 50em) {
   /* 800px */

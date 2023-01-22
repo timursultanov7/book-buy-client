@@ -47,7 +47,7 @@ const MobileHeader = () => {
         </Link>
 
         {isLoggedIn && (
-          <p className="header-heading"> {user[0].user_firstname}, welcome!</p>
+          <p className="header-heading"> Hi, {user[0].user_firstname}!</p>
         )}
       </div>
       <nav className="header-controls-rigth">
@@ -78,10 +78,16 @@ const MobileHeader = () => {
                       <List>
                         <ListItem disablePadding>
                           <ListItemButton onClick={() => setIsLoggedIn(false)}>
-                            <ListItemIcon>
-                              <FontAwesomeIcon icon={faRightFromBracket} />
-                            </ListItemIcon>
-                            <ListItemText primary="Logout" />
+                            {/* <ListItemIcon className="list-item-icon-mui">
+                              <FontAwesomeIcon
+                                className="icon-mui"
+                                icon={faRightFromBracket}
+                              />
+                            </ListItemIcon> */}
+                            <ListItemText
+                              className="list-item-text"
+                              primary="Logout"
+                            />
                           </ListItemButton>
                         </ListItem>
                       </List>
