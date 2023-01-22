@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  padding: 2rem 2rem;
 }
 
 .links-list {
@@ -31,6 +32,7 @@
 
 .site-map-links li {
   margin-bottom: 0.7rem;
+  font-weight: 500;
 }
 
 .site-map-links li:last-child {
@@ -39,7 +41,7 @@
 
 .social-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .logo-col {
@@ -50,14 +52,21 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 6rem;
+  height: 6rem;
 }
 
 /* MEDIA QUERIES */
 @media (max-width: 50em) {
   /* 800px */
+
   .footer {
     padding: 1rem 2rem;
     /* border-top: 1px solid #000; */
+  }
+
+  .social-links {
+    flex-direction: column;
   }
 
   .icon-social {

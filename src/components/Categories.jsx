@@ -13,18 +13,24 @@ export const Categories = () => {
   ];
 
   return (
-    <div className="categories-container">
+    <div className="categories-wrapper">
       <header className="category-header">
         <h2 className="secondary-heading">Genres</h2>
       </header>
 
-      {genres.map((genre) => {
-        return (
-          <Link to={`/${genre.genreName}`} key={genre.id} className="category">
-            <p className="category-title">{genre.genreName}</p>
-          </Link>
-        );
-      })}
+      <div className="categories-container">
+        {genres.map((genre) => {
+          return (
+            <Link
+              to={`/${genre.genreName}`}
+              key={genre.id}
+              className="category"
+            >
+              <p className="category-title">{genre.genreName}</p>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };

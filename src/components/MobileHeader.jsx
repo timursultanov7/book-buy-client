@@ -100,7 +100,10 @@ const MobileHeader = () => {
             )}
           </li>
 
-          <li className="mobile-nav-list-item" onClick={handleNavState}>
+          <li
+            className="mobile-nav-list-item mobile-nav-list-item--menu "
+            onClick={handleNavState}
+          >
             <MenuIcon style={{ fontSize: "2.6rem" }} />
           </li>
         </ul>

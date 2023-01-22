@@ -1,14 +1,74 @@
 /* MEDIA QUAERIES */
 
+.categories-wrapper {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories-container {
+  display: grid;
+  gap: 2rem;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  padding: 0 2rem 2rem 2rem;
+}
+
+.category-header {
+  grid-column: 1/-1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.secondary-heading {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: rgb(43, 43, 43);
+}
+.category:link,
+.category:visited {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeacbff;
+  text-decoration: none;
+  transition: all 0.3s;
+  /* height: 10rem; */
+  /* width: 15rem; */
+  height: 20rem;
+  width: 15rem;
+}
+
+.category:hover,
+.category:active {
+  background-color: rgba(234, 234, 203, 0.541);
+  transform: translate(2px, -3px);
+}
+
+.category-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #777;
+}
+
 @media (max-width: 50em) {
   .categories-container {
-    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-
     padding: 0 2rem 2rem 2rem;
   }
 
@@ -36,6 +96,8 @@
     background-color: #eaeacbff;
     text-decoration: none;
     transition: all 0.3s;
+    width: 10rem;
+    height: 15rem;
   }
 
   .category:hover,
@@ -55,5 +117,23 @@
 
 @media (max-width: 47.4em) {
   .categories-container {
+  }
+}
+@media (max-width: 34em) {
+  .categories-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 19em) {
+  .categories-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .category:link,
+  .category:visited {
+    /* width: 100vw; */
   }
 }

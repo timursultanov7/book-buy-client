@@ -1,72 +1,97 @@
 /* MEDIA QUAERIES */
 
+.primary-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.2;
+  letter-spacing: 2.2px;
+  color: #f1f3f5;
+}
+.layout-img-container {
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.layout-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 228, 228, 0.457),
+      rgba(0, 0, 0, 0.825)
+    ),
+    url("https://live.staticflickr.com/65535/52630939160_10eee9d3d7_b.jpg");
+
+  height: 100vh;
+  /* width: 90%; */
+  background-size: cover;
+  background-position: right;
+  /* background-repeat: no-repeat; */
+}
+
+.layout-img div {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.try-btn {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: #abcb71;
+  border-radius: 20rem;
+  width: 30rem;
+  border: none;
+}
+
+.try-btn:hover,
+.try-btn:active {
+  background-color: #000000ff;
+}
+
+.try-btn:hover span,
+.try-btn:active span {
+  color: #f1f3f5;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.try-btn span {
+  color: #000000ff;
+
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
 @media (max-width: 50em) {
   .primary-heading {
     font-size: 2.2rem;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 1.2px;
-    color: #f1f3f5;
-  }
-  .layout-img-container {
-    margin-bottom: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   }
 
   .layout-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(255, 228, 228, 0.457),
-        rgba(0, 0, 0, 0.825)
-      ),
-      url("https://live.staticflickr.com/65535/52630939160_10eee9d3d7_b.jpg");
-
     height: 100vh;
     background-size: cover;
     background-position: center;
   }
 
-  .layout-img div {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .try-btn {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    background-color: #abcb71;
-    border-radius: 20rem;
     width: 20rem;
-    border: none;
-  }
-
-  .try-btn:hover,
-  .try-btn:active {
-    background-color: #000000ff;
-  }
-
-  .try-btn:hover span,
-  .try-btn:active span {
-    color: #f1f3f5;
   }
 
   .try-btn span {
-    color: #000000ff;
-
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
     font-weight: 500;
   }
 }

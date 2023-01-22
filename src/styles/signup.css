@@ -72,11 +72,13 @@
   background-color: #ff6b6b;
   letter-spacing: 1.5px;
   font-size: 1.3rem;
+  color: #000000ff;
 }
 .btn-sign-up--facebook {
   background-color: #339af0;
   letter-spacing: 1.5px;
   font-size: 1.3rem;
+  color: #000000ff;
 }
 
 /* MEDIA QUAERIES */
