@@ -29,6 +29,8 @@ const MobileHeader = () => {
 
   const { setIsLoggedIn, isLoggedIn, user } = useContext(LoginContext);
 
+  console.log(user);
+
   const handleNavState = () => {
     setIsNavOpen(!isNavOpen);
   };

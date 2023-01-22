@@ -57,10 +57,10 @@ const SignUp = () => {
     setShow(true); // show modal
   };
 
-  const handleRegisterModal = () => {
-    navigate("/");
-    setShow(true);
-  };
+  // const handleRegisterModal = () => {
+  //   navigate("/");
+  //   setShow(true);
+  // };
 
   return (
     <div className="signup-wrapper">

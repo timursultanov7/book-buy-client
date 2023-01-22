@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "../styles/login-modal.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LoginModalContext } from "../context/LoginModalContext";
 import { LoginContext } from "../context/LoginContext";
 import Button from "react-bootstrap/Button";
@@ -12,6 +12,8 @@ const LoginModal = () => {
   const [disabled, setDisabled] = useState(true);
   const [user_password, setUserPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
+
+  const navigate = useNavigate();
 
   const { show, setShow, handleClose, handleShow } =
     useContext(LoginModalContext);
@@ -56,6 +58,8 @@ const LoginModal = () => {
         setUserEmail("");
         setUserPassword("");
       }
+
+      navigate("/");
 
       // Setting user as logged in
     } catch (err) {
