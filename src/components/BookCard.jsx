@@ -12,7 +12,10 @@ export const BookCard = ({ book }) => {
 
   return (
     <div className="book-card" key={book.book_id}>
-      <Link className="card-link" to={`/book/${book.book_id}`}>
+      <Link
+        className="card-link card-link--book-card"
+        to={`/book/${book.book_id}`}
+      >
         <div className="book-img-wrapper">
           <img
             className="book-img-card"
@@ -27,7 +30,7 @@ export const BookCard = ({ book }) => {
 
       <Link
         onClick={!isLoggedIn && handleShow}
-        className="card-link"
+        className="card-link card-link--book-card"
         to={isLoggedIn && `/read-book/${book.book_id}`}
       >
         <button className="buy-book-btn">Read</button>

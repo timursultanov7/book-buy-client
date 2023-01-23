@@ -27,7 +27,7 @@ export const Genre = () => {
 
   useEffect(() => {
     getGenre();
-  }, []);
+  }, [genre]);
 
   return (
     <div className="genre-container">

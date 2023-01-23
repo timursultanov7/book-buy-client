@@ -51,6 +51,8 @@ input::placeholder {
   color: #777;
   letter-spacing: 1.2px;
   line-height: 1.2;
+  position: absolute;
+  z-index: 0;
 }
 
 /* input[type="text"]:focus {

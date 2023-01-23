@@ -4,6 +4,7 @@ import { BooksProvider } from "./context/BooksContext";
 import { GenreProvider } from "./context/GenreContext";
 import { SingleBookProvider } from "./context/SingleBookContext";
 import { LoginModalProvider } from "./context/LoginModalContext";
+import { NavContextProvider } from "./context/NavContext";
 
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -15,17 +16,19 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <LoginProvider>
-        <LoginModalProvider>
-          <BooksProvider>
-            <GenreProvider>
-              <SingleBookProvider>
-                <App />
-              </SingleBookProvider>
-            </GenreProvider>
-          </BooksProvider>
-        </LoginModalProvider>
-      </LoginProvider>
+      <NavContextProvider>
+        <LoginProvider>
+          <LoginModalProvider>
+            <BooksProvider>
+              <GenreProvider>
+                <SingleBookProvider>
+                  <App />
+                </SingleBookProvider>
+              </GenreProvider>
+            </BooksProvider>
+          </LoginModalProvider>
+        </LoginProvider>
+      </NavContextProvider>
     </Router>
   </React.StrictMode>
 );

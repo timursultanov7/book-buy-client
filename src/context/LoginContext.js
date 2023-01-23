@@ -12,10 +12,7 @@ export const LoginProvider = ({ children }) => {
 
   const [user, setUser] = useState(userFromLocal);
 
-  console.log(user);
-
   const [isLoggedIn, setIsLoggedIn] = useState(isLogedInFromLocal);
-  // setIsLoggedIn(isLogedInFromLocal);
 
   useEffect(() => {
     localStorage.setItem("isLogedIn", JSON.stringify(isLoggedIn));

@@ -1,16 +1,78 @@
+.single-book-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 0.2fr 0.1fr 1fr;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.single-book-author-title {
+  /* flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-link--book {
+  /* grid-row: 2 !important;
+  grid-column: 2/-1 !important; */
+}
+
+.book-img {
+  /* width: 20rem;
+  height: 20rem; */
+}
+
+.book-author {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #777;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+.book-title {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  color: #777;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.book-author {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #777;
+}
+.book-title {
+  text-decoration: underline;
+}
+.book-description {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  grid-column: 1/-1;
+  line-height: 1.5;
+}
+
+.single-book-btn {
+  /* grid-row: 2;
+    grid-column: 1/-1; */
+  width: 50%;
+  height: 2.5rem;
+  letter-spacing: 1px;
+  /* align-self: flex-end; */
+}
+
+.card-link {
+  grid-column: 1/-1;
+}
+
 /* MEDIA QUAERIES */
 
 @media (max-width: 50em) {
   /* 800x */
-  .single-book-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 2fr; */
-    grid-template-rows: 0.5fr 0.1fr 1fr;
-    padding: 2rem;
-    gap: 1rem;
-    align-items: center;
-  }
 
   .single-book-author-title {
     /* flex-direction: column; */
@@ -21,12 +83,11 @@
   .book-img {
   }
   .book-author {
-    margin-bottom: 2rem;
     font-size: 1rem;
-    color: #000000ff;
   }
   .book-title {
     text-decoration: underline;
+    font-size: 2rem;
   }
   .book-description {
     margin-top: 3rem;
@@ -45,22 +106,23 @@
     /* align-self: flex-end; */
   }
 
-  .single-book-wrapper {
-    grid-template-rows: 0.5fr 0.1fr 1fr;
-  }
-
   .card-link {
     grid-column: 1/-1;
   }
 }
 
-@media (max-width: 50em) {
-  /* 480px */
-  /* .single-book-wrapper {
-    grid-template-rows: 0.5fr 0.1fr 1fr;
+@media (max-width: 34em) {
+  .book-title {
+    font-size: 1rem;
+    color: #777;
+    letter-spacing: 1px;
+    line-height: 1.4;
   }
+}
+@media (max-width: 30em) {
+  .book-title {
+    font-size: 0.7rem;
 
-  .card-link {
-    grid-column: 1/-1;
-  } */
+    line-height: 1.1;
+  }
 }

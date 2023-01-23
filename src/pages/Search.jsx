@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/Search.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { BooksContext } from "../context/BooksContext";
-import { BookCard } from "../components/BookCard";
-
-// import { useLocation } from "react-router-dom";
+import { LoginContext } from "../context/LoginContext";
+import { LoginModalContext } from "../context/LoginModalContext";
 
 const genres = [
   { genreName: "Fiction", id: 1 },
@@ -19,7 +18,11 @@ const genres = [
 const Search = () => {
   const [searchState, setSearchState] = useState("");
 
-  const { books, setBooks } = useContext(BooksContext);
+  const { books } = useContext(BooksContext);
+
+  const { handleShow } = useContext(LoginModalContext);
+
+  const { isLoggedIn } = useContext(LoginContext);
 
   const displaySearchBooks = () => {
     const filterByName = books
@@ -41,7 +44,7 @@ const Search = () => {
         return (
           <div className="book-card-search" key={book.book_id}>
             <div className="grid-search-card">
-              <Link className="card-link" to={`/book/${book.book_id}`}>
+              <Link className="card-link-search" to={`/book/${book.book_id}`}>
                 <div className="book-img-wrapper">
                   <img
                     className="book-img"
@@ -59,7 +62,12 @@ const Search = () => {
                   <h2 className="search-tertiary-heading">{book.book_name}</h2>
                   <h4 className="search-genre-heading">{book.book_genre}</h4>
                 </div>
-                <Link className="card-link" to={`/read-book/${book.book_id}`}>
+
+                <Link
+                  onClick={!isLoggedIn && handleShow}
+                  className="card-link"
+                  to={isLoggedIn && `/read-book/${book.book_id}`}
+                >
                   <button className="buy-book-btn buy-book-btn--search">
                     Read
                   </button>
@@ -94,17 +102,19 @@ const Search = () => {
             <h3 className="popular-searches-heading">Popular searches</h3>
           </header>
 
-          {genres.map((genre) => {
-            return (
-              <Link
-                to={`/${genre.genreName}`}
-                key={genre.id}
-                className="category"
-              >
-                <p className="category-title">{genre.genreName}</p>
-              </Link>
-            );
-          })}
+          <div className="categories-container">
+            {genres.map((genre) => {
+              return (
+                <Link
+                  to={`/${genre.genreName}`}
+                  key={genre.id}
+                  className="category"
+                >
+                  <p className="category-title">{genre.genreName}</p>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       ) : (
         <div className="search-results">{displaySearchBooks()}</div>

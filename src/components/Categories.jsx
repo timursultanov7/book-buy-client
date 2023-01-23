@@ -18,7 +18,7 @@ export const Categories = () => {
         <h2 className="secondary-heading">Genres</h2>
       </header>
 
-      <div className="categories-container">
+      <div className="categories-container" id="genres">
         {genres.map((genre) => {
           return (
             <Link
