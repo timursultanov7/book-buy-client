@@ -22,7 +22,7 @@ export const Categories = () => {
         {genres.map((genre) => {
           return (
             <Link
-              to={`/${genre.genreName}`}
+              to={`/categories/${genre.genreName}`}
               key={genre.id}
               className="category"
             >

@@ -13,6 +13,7 @@ import { Book } from "./pages/Book";
 import Search from "./pages/Search";
 import SignUp from "./pages/SignUp";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { NotFound404 } from "./pages/NotFound404";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <MobileHeader />
       </div>
       <Routes>
+        <Route path="*" element={<NotFound404 />} />
+
         <Route
           path="/"
           element={
@@ -30,7 +33,7 @@ function App() {
           }
         />
         <Route
-          path="/:genre"
+          path="/categories/:genre"
           element={
             <ErrorBoundary>
               <Genre />
