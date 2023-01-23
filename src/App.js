@@ -12,6 +12,7 @@ import ReadBook from "./pages/ReadBook";
 import { Book } from "./pages/Book";
 import Search from "./pages/Search";
 import SignUp from "./pages/SignUp";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
@@ -20,13 +21,55 @@ function App() {
         <MobileHeader />
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:genre" element={<Genre />} />
-        <Route path="/book/:id" element={<Book />} />
+        <Route
+          path="/"
+          element={
+            <ErrorBoundary>
+              <Home />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/:genre"
+          element={
+            <ErrorBoundary>
+              <Genre />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/book/:id"
+          element={
+            <ErrorBoundary>
+              <Book />
+            </ErrorBoundary>
+          }
+        />
 
-        <Route path="/read-book/:id" element={<ReadBook />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route
+          path="/read-book/:id"
+          element={
+            <ErrorBoundary>
+              <ReadBook />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <ErrorBoundary>
+              <Search />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <ErrorBoundary>
+              <SignUp />
+            </ErrorBoundary>
+          }
+        />
       </Routes>
       <MobileFooter />
     </div>

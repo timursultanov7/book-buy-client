@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import { BooksProvider } from "./context/BooksContext";
 import { GenreProvider } from "./context/GenreContext";
