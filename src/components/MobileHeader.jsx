@@ -43,6 +43,11 @@ const MobileHeader = () => {
     navigate("/");
   };
 
+  const handleLoginIcon = () => {
+    setIsNavOpen(false);
+    handleShow();
+  };
+
   return (
     <div>
       <header className="mobile-header-container ">
@@ -64,7 +69,10 @@ const MobileHeader = () => {
           <ul className="mobile-nav-list">
             <Link className="mobile-nav-link" to="/search">
               <li className="mobile-nav-list-item">
-                <SearchIcon style={{ fontSize: "2.6rem" }} />
+                <SearchIcon
+                  onClick={() => setIsNavOpen(false)}
+                  style={{ fontSize: "2.6rem" }}
+                />
               </li>
             </Link>
             <li className="mobile-nav-list-item">
@@ -101,7 +109,8 @@ const MobileHeader = () => {
                 </div>
               ) : (
                 <PersonIcon
-                  onClick={handleShow}
+                  // onClick={handleShow}
+                  onClick={handleLoginIcon}
                   style={{ fontSize: "2.6rem" }}
                 />
               )}

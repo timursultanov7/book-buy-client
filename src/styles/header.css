@@ -130,8 +130,9 @@
 
   .mobile-menu {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     position: relative;
+    /* width: 90vw; */
   }
 
   .mobile-menu-link:link,
@@ -158,7 +159,7 @@
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    margin-top: 10rem;
+    margin-top: 7rem;
     align-items: center;
   }
 
@@ -189,6 +190,7 @@
     background-color: #abcb71;
     border-radius: 20rem;
     width: 20rem;
+    /* padding: 1rem 2rem; */
   }
 
   .try-for-free-mob-btn:hover {
