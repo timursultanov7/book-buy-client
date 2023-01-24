@@ -47,7 +47,7 @@ const Search = () => {
               <Link className="card-link-search" to={`/book/${book.book_id}`}>
                 <div className="book-img-wrapper">
                   <img
-                    className="book-img"
+                    className="book-img book-img-search"
                     src={book.book_img}
                     alt={book.book_name}
                   />

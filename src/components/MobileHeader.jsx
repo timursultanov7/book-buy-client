@@ -95,7 +95,9 @@ const MobileHeader = () => {
                       <nav aria-label="main mailbox folders">
                         <List>
                           <ListItem disablePadding>
-                            <ListItemButton onClick={handleShow}>
+                            <ListItemButton
+                              onClick={() => setIsLoggedIn(false)}
+                            >
                               <ListItemText
                                 className="list-item-text"
                                 primary="Logout"

@@ -1,18 +1,34 @@
 import React from "react";
+import "../styles/featured-in.css";
 
 export const FeaturedIn = () => {
   return (
     <div>
       {" "}
-      <section class="section-featured">
-        <div class="container">
-          <h2 class="heading-featured-in">As featured in</h2>
-          <div class="logos">
-            <img src="img/logos/techcrunch.png" alt="Techcrunch" />
-            <img src="img/logos/business-insider.png" alt="Business Insider" />
-            <img src="img/logos/the-new-york-times.png" alt="New York Times" />
-            <img src="img/logos/forbes.png" alt="Forbes" />
-            <img src="img/logos/usa-today.png" alt="USA Today" />
+      <section className="section-featured">
+        <div className="container">
+          <h2 className="heading-featured-in">As featured in</h2>
+          <div className="logos">
+            <img
+              src="https://live.staticflickr.com/65535/52646480550_edfc21fa16_o.png"
+              alt="Techcrunch"
+            />
+            <img
+              src="https://live.staticflickr.com/65535/52646519583_5cd8cf11cc_o.png"
+              alt="Business Insider"
+            />
+            <img
+              src="https://live.staticflickr.com/65535/52645533392_7fa39391b5_o.png"
+              alt="New York Times"
+            />
+            <img
+              src="https://live.staticflickr.com/65535/52646044736_5a2955faaa_o.png"
+              alt="Forbes"
+            />
+            <img
+              src="https://live.staticflickr.com/65535/52646480530_f55af8f8f3_o.png"
+              alt="USA Today"
+            />
           </div>
         </div>
       </section>
