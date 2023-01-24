@@ -5,13 +5,11 @@ import { BestSellers } from "../components/BestSellers";
 import { Categories } from "../components/Categories";
 import { FeaturedIn } from "../components/FeaturedIn";
 
-import { useElementOnScreen } from "../components/useElementOnScreen";
-
-export const Home = () => {
+export const Home = ({ featuredInRef }) => {
   return (
     <div>
       <LayoutImage />
-      <FeaturedIn />
+      <FeaturedIn featuredInRef={featuredInRef} />
       <BestSellers />
 
       <Categories />

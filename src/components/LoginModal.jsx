@@ -70,7 +70,7 @@ const LoginModal = () => {
   };
 
   return (
-    <>
+    <div className="modal-wrapper">
       <Modal
         onSubmit={(e) => {
           handleLogin();
@@ -130,7 +130,7 @@ const LoginModal = () => {
           </Form>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 };
 

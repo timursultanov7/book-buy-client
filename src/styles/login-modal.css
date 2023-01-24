@@ -1,3 +1,8 @@
+.modal-wrapper {
+  position: absolute;
+  z-index: 9999;
+}
+
 .modal-form-container {
   font-size: 1rem;
   font-weight: 500;

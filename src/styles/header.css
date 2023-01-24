@@ -150,7 +150,7 @@
 
   .nav-menu-icon {
     position: absolute;
-    z-index: 9999;
+    z-index: 999;
     top: 10%;
     right: 3%;
   }
