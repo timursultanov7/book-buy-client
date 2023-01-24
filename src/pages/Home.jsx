@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { LayoutImage } from "../components/LayoutImage";
 import { BestSellers } from "../components/BestSellers";
 import { Categories } from "../components/Categories";
 import { FeaturedIn } from "../components/FeaturedIn";
+
+import { useElementOnScreen } from "../components/useElementOnScreen";
 
 export const Home = () => {
   return (

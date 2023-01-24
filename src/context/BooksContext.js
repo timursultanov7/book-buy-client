@@ -4,6 +4,7 @@ export const BooksContext = createContext();
 
 export const BooksProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getBooks = async () => {
@@ -16,6 +17,7 @@ export const BooksProvider = ({ children }) => {
         const data = await res.json();
 
         setBooks(data);
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -25,7 +27,7 @@ export const BooksProvider = ({ children }) => {
   }, []);
 
   return (
-    <BooksContext.Provider value={{ books, setBooks }}>
+    <BooksContext.Provider value={{ books, setBooks, loading }}>
       {children}
     </BooksContext.Provider>
   );

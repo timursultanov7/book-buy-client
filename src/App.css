@@ -51,17 +51,21 @@ input::placeholder {
   color: #777;
   letter-spacing: 1.2px;
   line-height: 1.2;
-  /* position: absolute;
-  -webkit-transform: translate3d(0, 0, 0);
-  z-index: 9999; */
 }
 
 /* input[type="text"]:focus {
   text-align: center;
 } */
 
-.sticky-header {
-  position: sticky;
+.header-wrapper {
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
 }
 
 .grid {

@@ -1,4 +1,6 @@
 import React from "react";
+import "../styles/error-boundary.css";
+import { Link } from "react-router-dom";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -14,7 +16,13 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      return (
+        <div className="error-boundary-container">
+          <h1>Ooops.....Something went wrong!</h1>
+          <h2>Try to reload page</h2>
+          <Link to="/">Home</Link>
+        </div>
+      );
     }
 
     return this.props.children;

@@ -22,7 +22,9 @@ import { LoginContext } from "../context/LoginContext";
 import { NavContext } from "../context/NavContext";
 import LoginModal from "./LoginModal";
 
-const MobileHeader = () => {
+import { useElementOnScreen } from "./useElementOnScreen";
+
+const MobileHeader = ({ featuredInSection }) => {
   const { isNavOpen, setIsNavOpen } = useContext(NavContext);
 
   const [showDrop, setShowDrop] = useState(false);
@@ -50,7 +52,7 @@ const MobileHeader = () => {
 
   return (
     <div>
-      <header className="mobile-header-container ">
+      <header className="mobile-header-container">
         <div className="header-controls-left">
           <Link to="/">
             <img

@@ -1,4 +1,5 @@
 import "./App.css";
+import { useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -18,7 +19,7 @@ import { NotFound404 } from "./pages/NotFound404";
 function App() {
   return (
     <div className="App">
-      <div className="sticky-header">
+      <div className={"header-wrapper"}>
         <MobileHeader />
       </div>
       <Routes>

@@ -1,49 +1,49 @@
 /* MEDIA QUAERIES */
 
-@media (max-width: 50em) {
-  .read-book-container {
-    padding: 2rem;
-  }
-
-  .headings-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000000ff;
-    margin-bottom: 4rem;
-  }
-  .heading-book-name {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-  .heading-book-author {
-    font-size: 1.3rem;
-    letter-spacing: 1.2px;
-    font-style: italic;
-    color: #777;
-  }
-  .book-section {
-    display: flex;
-    flex-direction: column;
-  }
-  .heading-chapter {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    align-self: center;
-    margin-bottom: 2rem;
-    color: #000000ff;
-  }
-  .text-container {
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    color: #000000ff;
-    word-spacing: 10px;
-    line-height: 1.5;
-  }
-  .text-container p {
-  }
+/* @media (max-width: 50em) { */
+.read-book-container {
+  padding: 2rem;
 }
+
+.headings-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000ff;
+  margin-bottom: 4rem;
+}
+.heading-book-name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.heading-book-author {
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  font-style: italic;
+  color: #777;
+}
+.book-section {
+  display: flex;
+  flex-direction: column;
+}
+.heading-chapter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  align-self: center;
+  margin-bottom: 2rem;
+  color: #000000ff;
+}
+.text-container {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #000000ff;
+  word-spacing: 10px;
+  line-height: 1.5;
+}
+.text-container p {
+}
+/* } */

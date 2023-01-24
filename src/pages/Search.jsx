@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { BooksContext } from "../context/BooksContext";
 import { LoginContext } from "../context/LoginContext";
 import { LoginModalContext } from "../context/LoginModalContext";
+import LoadingProgress from "../components/LoadingProgress";
 
 const genres = [
   { genreName: "Fiction", id: 1 },
@@ -18,7 +19,7 @@ const genres = [
 const Search = () => {
   const [searchState, setSearchState] = useState("");
 
-  const { books } = useContext(BooksContext);
+  const { books, loading } = useContext(BooksContext);
 
   const { handleShow } = useContext(LoginModalContext);
 
@@ -106,7 +107,7 @@ const Search = () => {
             {genres.map((genre) => {
               return (
                 <Link
-                  to={`/${genre.genreName}`}
+                  to={`/categories/${genre.genreName}`}
                   key={genre.id}
                   className="category"
                 >
@@ -117,7 +118,9 @@ const Search = () => {
           </div>
         </div>
       ) : (
-        <div className="search-results">{displaySearchBooks()}</div>
+        <div className="search-results">
+          {loading ? <LoadingProgress /> : displaySearchBooks()}
+        </div>
       )}
     </div>
   );

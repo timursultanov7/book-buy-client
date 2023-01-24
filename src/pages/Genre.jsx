@@ -5,10 +5,14 @@ import { GenreContext } from "../context/GenreContext";
 import { useParams } from "react-router-dom";
 import { BookCard } from "../components/BookCard";
 
+import LoadingProgress from "../components/LoadingProgress";
+
 export const Genre = () => {
   const params = useParams();
 
   const { genre, setGenre } = useContext(GenreContext);
+
+  const [loading, setLoading] = useState(true);
 
   const getGenre = async () => {
     try {
@@ -20,6 +24,7 @@ export const Genre = () => {
       const data = await res.json();
 
       setGenre(data);
+      setLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -34,9 +39,13 @@ export const Genre = () => {
       <h1 className="heading-primary-genre">{params.genre}</h1>
 
       <div className="genre-books-wrapper">
-        {genre.map((book) => {
-          return <BookCard key={book.book_id} book={book} />;
-        })}
+        {loading ? (
+          <LoadingProgress />
+        ) : (
+          genre.map((book) => {
+            return <BookCard key={book.book_id} book={book} />;
+          })
+        )}
       </div>
     </div>
   );

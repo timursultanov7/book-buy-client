@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { SingleBookContext } from "../context/SingleBookContext";
 import "../styles/book.css";
+import LoadingProgress from "../components/LoadingProgress";
 
 export const Book = () => {
   const { singleBook, setSingleBook } = useContext(SingleBookContext);
   const { handleShow } = useContext(LoginModalContext);
 
   const { isLoggedIn } = useContext(LoginContext);
-
+  const [loading, setLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export const Book = () => {
         const data = await res.json();
 
         setSingleBook(data);
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -35,7 +37,7 @@ export const Book = () => {
 
   return (
     <div>
-      {singleBook ? (
+      {!loading ? (
         singleBook.map((book) => {
           return (
             <div className="single-book-wrapper" key={book.book_id}>
@@ -58,7 +60,7 @@ export const Book = () => {
           );
         })
       ) : (
-        <h1>LOADING...</h1>
+        <LoadingProgress />
       )}
     </div>
   );
