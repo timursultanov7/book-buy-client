@@ -51,8 +51,9 @@ input::placeholder {
   color: #777;
   letter-spacing: 1.2px;
   line-height: 1.2;
-  position: absolute;
-  z-index: 0;
+  /* position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 9999; */
 }
 
 /* input[type="text"]:focus {

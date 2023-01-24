@@ -25,6 +25,15 @@
   text-transform: uppercase;
 }
 
+.form-control {
+  position: relative;
+}
+.form-control::placeholder {
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 9999;
+}
+
 .form-control:focus {
   outline: none !important;
   /* color: #abcb71; */

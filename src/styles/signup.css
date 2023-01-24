@@ -46,6 +46,12 @@
 }
 .input-form {
   height: 2.5rem;
+  position: relative;
+}
+.input-form::placeholder {
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 9999;
 }
 
 .signup-social-media {
