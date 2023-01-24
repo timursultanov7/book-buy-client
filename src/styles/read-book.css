@@ -3,6 +3,7 @@
 /* @media (max-width: 50em) { */
 .read-book-container {
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 .headings-wrapper {
@@ -47,3 +48,19 @@
 .text-container p {
 }
 /* } */
+
+@media (max-width: 40em) {
+  .heading-book-name {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 32em) {
+  .heading-book-name {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 27em) {
+  .heading-book-name {
+    font-size: 1rem;
+  }
+}
