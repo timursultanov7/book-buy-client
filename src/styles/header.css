@@ -27,7 +27,7 @@
 
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: 4rem;
   padding: 0 2rem;
   background-color: #fff;
   /* border-bottom: 1px solid #000; */
@@ -51,8 +51,8 @@
 }
 
 .logo {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .header-controls-left {
@@ -151,7 +151,7 @@
   .nav-menu-icon {
     position: absolute;
     z-index: 999;
-    top: 10%;
+    top: 5%;
     right: 3%;
   }
 
