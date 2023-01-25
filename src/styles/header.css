@@ -161,6 +161,7 @@
     /* justify-content: center; */
     margin-top: 7rem;
     align-items: center;
+    padding-left: 0;
   }
 
   .mobile-menu-item {
