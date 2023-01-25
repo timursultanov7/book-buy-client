@@ -130,7 +130,7 @@
 
   .mobile-menu {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     position: relative;
     /* width: 90vw; */
   }
@@ -189,7 +189,7 @@
     /* text-transform:; */
 
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.2rem;
 
     display: flex;
     justify-content: center;
@@ -198,9 +198,9 @@
 
     background-color: #abcb71;
     border-radius: 20rem;
-    width: 20rem;
+    width: 100%;
     color: #000000ff;
-    /* padding: 1rem 2rem; */
+    padding: 1rem 1.5rem;
   }
 
   .try-for-free-mob-btn:hover {

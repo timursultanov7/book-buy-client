@@ -52,7 +52,8 @@
 .input-form::placeholder {
   position: absolute;
   -webkit-transform: translate3d(0, 0, 0);
-  z-index: 9996;
+  ransform: translate3d(0, 0, 0);
+  z-index: 99;
 }
 
 .signup-social-media {

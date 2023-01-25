@@ -31,7 +31,7 @@ function App() {
   const options = {
     root: null,
     rootMargin: "-80px",
-    threshold: 0,
+    threshold: 1,
   };
 
   useEffect(() => {

@@ -13,7 +13,11 @@ export const BestSellers = () => {
   return (
     <div className="bestsellers-wrapper">
       <h2 className="bestsellers-heading">Best Sellers</h2>
-      <section className="bestsellers-container grid">
+      <section
+        className={
+          loading ? "grid-sceleton grid" : "bestsellers-container grid"
+        }
+      >
         {loading ? (
           skeletonQuantity.map((skeleton) => {
             return (

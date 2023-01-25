@@ -4,12 +4,17 @@
   /* padding: 2rem; */
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .bestsellers-heading {
   font-size: 3rem;
 }
-.bestsellers-container {
+.grid-sceleton {
+  overflow-y: scroll;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem;
 }
 
 /* @media (max-width: 64em) { */
