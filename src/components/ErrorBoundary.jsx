@@ -20,7 +20,6 @@ class ErrorBoundary extends React.Component {
         <div className="error-boundary-container">
           <h1>Ooops.....Something went wrong!</h1>
           <h2>Try to reload page</h2>
-          <Link to="/">Home</Link>
         </div>
       );
     }

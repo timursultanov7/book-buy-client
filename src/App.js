@@ -30,7 +30,7 @@ function App() {
 
   const options = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: "-80px",
     threshold: 0,
   };
 
@@ -39,9 +39,9 @@ function App() {
 
     if (featuredInRef.current) observer.observe(featuredInRef.current);
 
-    return () => {
-      if (featuredInRef.current) observer.unobserve(featuredInRef.current);
-    };
+    // return () => {
+    //   if (featuredInRef.current) observer.unobserve(featuredInRef.current);
+    // };
   }, [featuredInRef, options]);
 
   return (

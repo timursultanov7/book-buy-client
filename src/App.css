@@ -70,7 +70,7 @@ input::placeholder {
   z-index: 999;
   top: 0;
   left: 0;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .grid {
