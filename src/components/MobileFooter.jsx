@@ -18,10 +18,6 @@ const MobileFooter = () => {
         </Link>
       </div>
 
-      <div>
-        <p>© Book buy 2023 </p>
-      </div>
-
       <div className="site-map-col">
         <ul className="links-list site-map-links">
           <li className="site-map-link">
