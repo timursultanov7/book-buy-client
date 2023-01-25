@@ -1,0 +1,18 @@
+.not-found-container {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 5rem;
+}
+
+.not-found-container div {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: center;
+}
+
+.heading-not-found {
+  font-size: 3rem;
+}

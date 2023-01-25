@@ -1,12 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/not-found-404.css";
 
 export const NotFound404 = () => {
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/");
+  };
+
   return (
-    <div>
-      <h1>Page not found - 404</h1>
-      <Link to="/">Return Home</Link>
+    <div className="not-found-container">
+      <div>
+        <h1 className="heading-not-found">Page not found - 404</h1>
+
+        <Link onClick={goHome} to="/">
+          {" "}
+          Return Home
+        </Link>
+      </div>
     </div>
   );
 };
