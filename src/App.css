@@ -58,6 +58,10 @@ input::placeholder {
 } */
 
 .header-wrapper {
+  /* display: block;
+  width: 100vw;
+  opacity: 1; */
+  /* background-color: #f1f3f5; */
 }
 
 .sticky {
@@ -66,6 +70,7 @@ input::placeholder {
   z-index: 999;
   top: 0;
   left: 0;
+  opacity: 0.9;
 }
 
 .grid {
