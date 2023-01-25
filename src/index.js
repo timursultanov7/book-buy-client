@@ -23,7 +23,9 @@ root.render(
             <BooksProvider>
               <GenreProvider>
                 <SingleBookProvider>
-                  <App />
+                  <ErrorBoundary>
+                    <App />
+                  </ErrorBoundary>
                 </SingleBookProvider>
               </GenreProvider>
             </BooksProvider>
