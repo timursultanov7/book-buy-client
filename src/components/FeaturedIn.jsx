@@ -5,7 +5,7 @@ import "../styles/featured-in.css";
 export const FeaturedIn = ({ featuredInRef }) => {
   return (
     <div>
-      <section ref={featuredInRef} className="section-featured ">
+      <section className="section-featured ">
         <div className="container">
           <h2 className="heading-featured-in">As featured in</h2>
           <div className="logos">

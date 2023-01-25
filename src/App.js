@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useRef, useState } from "react";
+
 import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,36 +17,9 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { NotFound404 } from "./pages/NotFound404";
 
 function App() {
-  const featuredInRef = useRef(null);
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  console.log(isVisible);
-
-  const featureSectionObs = (entries) => {
-    const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
-  };
-
-  const options = {
-    root: null,
-    rootMargin: "-80px",
-    threshold: 0,
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(featureSectionObs, options);
-
-    if (featuredInRef.current) observer.observe(featuredInRef.current);
-
-    // return () => {
-    //   if (featuredInRef.current) observer.unobserve(featuredInRef.current);
-    // };
-  }, [featuredInRef, options]);
-
   return (
     <div className="App">
-      <div className={isVisible ? "header-wrapper" : "header-wrapper sticky"}>
+      <div className="header-wrapper sticky">
         <MobileHeader />
       </div>
       <Routes>
@@ -56,7 +29,7 @@ function App() {
           path="/"
           element={
             <ErrorBoundary>
-              <Home featuredInRef={featuredInRef} />
+              <Home />
             </ErrorBoundary>
           }
         />
