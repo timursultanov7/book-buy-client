@@ -41,7 +41,7 @@ export const Book = () => {
         singleBook.map((book) => {
           return (
             <div className="single-book-wrapper" key={book.book_id}>
-              <img className="book-img" src={book.book_img} />
+              <img className="book-img img-without-br" src={book.book_img} />
               <div className="single-book-author-title">
                 <div>
                   <h2 className="book-author">{book.book_author}</h2>
